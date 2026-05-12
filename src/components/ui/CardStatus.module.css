@@ -1,0 +1,23 @@
+.CardItem{
+    background-color: var(--hover-color);
+}
+
+
+.icon{
+    font-size: 2.0rem;
+    color: var(--main-color);
+}
+
+.info{
+    color: var(--main-color);
+}
+.counter ,
+.tittle{
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+
+.counter{
+    font-size: 2rem;
+}

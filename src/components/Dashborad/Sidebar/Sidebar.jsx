@@ -1,22 +1,27 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Sidebar.module.css"
 function Sidebar() {
     const links = [
         {
             icon: "fa-chart-column ",
-            tittle: "Status"
+            tittle: "Status",
+            path:"/"
         },
         {
             icon: " fa-people-group ",
-            tittle: "Users Mangement"
+            tittle: "Users Mangement",
+            path:"/users"
         },
         {
             icon: "fa-building",
-            tittle: "Projects Mangement"
+            tittle: "Projects Mangement",
+            path:"/projects"
         },
 
         {
             icon: "fa-building",
-            tittle: "Developers Mangement"
+            tittle: "Developers Mangement",
+            path:"/"
         },
         {
             icon: " fa-earth-asia",
@@ -24,7 +29,8 @@ function Sidebar() {
         },
         {
             icon: "fa-message",
-            tittle: "Live Chat "
+            tittle: "Live Chat ",
+            path:"/"
         },
     ];
     return (
@@ -32,10 +38,12 @@ function Sidebar() {
             <div className="px-3 mb-2 fs-4 fw-semibold">Dashboard</div>
             <nav>
                {links.map((item,idx)=>(
-                 <div className={`${styles.navIcon} align-items-center gap-2 d-flex p-3`} key={idx}>
+                 <NavLink
+                 to={item.path}
+                 className={`${styles.navIcon} align-items-center gap-2 d-flex p-3`} key={idx}>
                     <i className={`fa-solid ${item.icon} fs-3 `}></i>
                     <span className={styles.tittle}>{item.tittle}</span>
-                </div>
+                </NavLink>
                ))}
             </nav>
 
